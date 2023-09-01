@@ -6,8 +6,9 @@ from arithmetic import *
 while True:
     user_input = input("Enter your equation > ")
     tokens = user_input.split(" ")
-
-    if "q" in tokens:
+    mystring1 = "q"
+    mystring2 = "quit"
+    if mystring1 or mystring2 in tokens:
         print("You will exit.")
         break
 
@@ -29,7 +30,7 @@ while True:
 
     # A place to store the return value of the math function we call,
     # to give us one clear place where that result is printed.
-
+    result = None
     if not num1.isdigit() or not num2.isdigit():
         print("Those aren't numbers!")
         continue
